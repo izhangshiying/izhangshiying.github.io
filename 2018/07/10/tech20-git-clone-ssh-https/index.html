@@ -15,7 +15,7 @@
 <meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-07-11-git-clone-ssh%E6%96%B9%E5%BC%8F2.png">
 <meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-07-11-git-clone-ssh%E6%96%B9%E5%BC%8F3.png">
 <meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-07-11-git-clone-absolute-path.png">
-<meta property="og:updated_time" content="2018-07-11T02:06:32.000Z">
+<meta property="og:updated_time" content="2018-07-11T02:16:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git clone github的公开仓库:ssh方式">
 <meta name="twitter:description" content="不懂得看git log提示才是大麻烦">
@@ -112,18 +112,18 @@ ga('send', 'pageview');
 <h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><p><a href="https://stackoverflow.com/questions/6167905/git-clone-through-ssh" target="_blank" rel="external">git clone through ssh - Stack Overflow</a><br><a href="https://help.github.com/articles/cloning-a-repository/" target="_blank" rel="external">Cloning a repository - User Documentation</a><br><a href="https://help.github.com/articles/testing-your-ssh-connection/" target="_blank" rel="external">Testing your SSH connection - User Documentation</a></p>
 <h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><p><code>git clone ssh://git@github.com:DebugUself/planet.git</code> -&gt; 不成功<br><code>git clone https://github.com/DebugUself/planet.git</code> -&gt; 成功</p>
 <h1 id="第二轮"><a href="#第二轮" class="headerlink" title="第二轮"></a>第二轮</h1><h2 id="目标-1"><a href="#目标-1" class="headerlink" title="目标"></a>目标</h2><p>回顾资料后，寻找ssh方式到底哪里出现问题？</p>
-<h2 id="资源-1"><a href="#资源-1" class="headerlink" title="资源"></a>资源</h2><p><a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#relative-links" target="_blank" rel="external">Basic writing and formatting syntax - User Documentation</a><br><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-07-11-git-clone-ssh%E6%96%B9%E5%BC%8F1.png" alt="git-clone-ssh方式1"><br><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-07-11-git-clone-ssh%E6%96%B9%E5%BC%8F2.png" alt="git-clone-ssh方式2"><br><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-07-11-git-clone-ssh%E6%96%B9%E5%BC%8F3.png" alt="git-clone-ssh方式3"><br><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-07-11-git-clone-absolute-path.png" alt="git-clone-absolute-path"></p>
+<h2 id="资源-1"><a href="#资源-1" class="headerlink" title="资源"></a>资源</h2><p><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-07-11-git-clone-ssh%E6%96%B9%E5%BC%8F1.png" alt="git-clone-ssh方式1"><br><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-07-11-git-clone-ssh%E6%96%B9%E5%BC%8F2.png" alt="git-clone-ssh方式2"><br><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-07-11-git-clone-ssh%E6%96%B9%E5%BC%8F3.png" alt="git-clone-ssh方式3"><br><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-07-11-git-clone-absolute-path.png" alt="git-clone-absolute-path"></p>
 <h2 id="命令行-1"><a href="#命令行-1" class="headerlink" title="命令行"></a>命令行</h2><p>use relative link <code>git clone git@github.com:DebugUself/planet.git</code> -&gt; 成功<br>use absolute link <code>git clone ssh://git@github.com/~/DebugUself/planet.git</code> -&gt; 不成功</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li>通过ssh方式clone github上公开仓库是可行，具体有两种方法。这两种方法的区分为:使用relative link，还是使用absolute link。使用方法不同，命令行也不一样。relative link的命令行大致为<code>git clone git@github.com:relative/path/repo.git，absolute link的命令行大致为</code>git clone ssh://git@github.com/absolute/path/repo.git`</li>
-<li>老师傅指出 <strong>不懂得看git log提示才是大麻烦</strong>。如何看git log提示，检查一遍git log里重复的字段，可能会发现线索。</li>
+<li>通过ssh方式clone github上公开仓库是可行，具体有两种方法。这两种方法的区分为:使用relative link，还是使用absolute link。使用方法不同，命令行也不一样。relative link的命令行大致为<code>git clone git@github.com:relative/path/repo.git</code>，absolute link的命令行大致为<code>git clone ssh://git@github.com/absolute/path/repo.git</code>。但由于github建议使用relative link来clone repo，所以尽量使用relative link的方法比较合适。(见<a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#relative-links" target="_blank" rel="external">Basic writing and formatting syntax - User Documentation</a>)</li>
+<li>老师傅指出 <strong>不懂得看git log提示才是大麻烦</strong>。如何看git log提示，检查一遍git log里重复的字段，可能会发现线索。(见上图:git-clone-ssh方式2)</li>
 </ol>
 <h1 id="Changelog"><a href="#Changelog" class="headerlink" title="Changelog"></a>Changelog</h1><p>2018年07月11日09:36:46 第二轮<br>2018年07月10日10:07:54 第一轮</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangshiying.in/2018/07/10/tech20-git-clone-ssh-https/" data-id="cjjghhwmk003vq8on7dj7pwgn" class="article-share-link">Share</a>
+      <a data-url="http://zhangshiying.in/2018/07/10/tech20-git-clone-ssh-https/" data-id="cjjghszou00420aon6vuv1zd0" class="article-share-link">Share</a>
       
       
     </footer>
