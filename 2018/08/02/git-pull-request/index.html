@@ -3,18 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>「莊子晨讀」02:全汝形抱汝生 | 张诗颖的作品积累</title>
+  <title>开源社区协同技能01-git pull request以及之后 | 张诗颖的作品积累</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="全汝形抱汝生即，學習珍惜當下。一方面，多記錄當下的狀態。從熱愛和信心的角度，加強對當下的感知。當然也要小心，過度記錄導致焦慮、自卑。另一方面，閱讀書籍，感受才智之士對當下的態度、作為。">
+  <meta name="description" content="0. 目标 向怼圈公开仓库投稿 确认投稿成功并发布 料理pull request之后事">
 <meta property="og:type" content="article">
-<meta property="og:title" content="「莊子晨讀」02:全汝形抱汝生">
-<meta property="og:url" content="http://zhangshiying.in/2018/07/18/Rd50-zhuangzi-gengsangchu-quanruxin-baorusheng/index.html">
+<meta property="og:title" content="开源社区协同技能01-git pull request以及之后">
+<meta property="og:url" content="http://zhangshiying.in/2018/08/02/git-pull-request/index.html">
 <meta property="og:site_name" content="张诗颖的作品积累">
-<meta property="og:description" content="全汝形抱汝生即，學習珍惜當下。一方面，多記錄當下的狀態。從熱愛和信心的角度，加強對當下的感知。當然也要小心，過度記錄導致焦慮、自卑。另一方面，閱讀書籍，感受才智之士對當下的態度、作為。">
-<meta property="og:updated_time" content="2018-07-18T12:31:27.000Z">
+<meta property="og:description" content="0. 目标 向怼圈公开仓库投稿 确认投稿成功并发布 料理pull request之后事">
+<meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-07-24-pull-request-compare-changes.png">
+<meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-07-24-pull-request-open-a-new-request.png">
+<meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-07-24-pull-request-slack-message.png">
+<meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-07-24-pull-request-successfully-merged.png">
+<meta property="og:updated_time" content="2018-08-02T08:12:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="「莊子晨讀」02:全汝形抱汝生">
-<meta name="twitter:description" content="全汝形抱汝生即，學習珍惜當下。一方面，多記錄當下的狀態。從熱愛和信心的角度，加強對當下的感知。當然也要小心，過度記錄導致焦慮、自卑。另一方面，閱讀書籍，感受才智之士對當下的態度、作為。">
+<meta name="twitter:title" content="开源社区协同技能01-git pull request以及之后">
+<meta name="twitter:description" content="0. 目标 向怼圈公开仓库投稿 确认投稿成功并发布 料理pull request之后事">
+<meta name="twitter:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-07-24-pull-request-compare-changes.png">
 <meta name="twitter:creator" content="@coolwuxing">
   
     <link rel="alternative" href="/atom.xml" title="张诗颖的作品积累" type="application/atom+xml">
@@ -76,14 +81,14 @@ ga('send', 'pageview');
   </div>
 </div>
       <div id="main-wrap" class="outer">
-        <section id="main"><article id="post-Rd50-zhuangzi-gengsangchu-quanruxin-baorusheng" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-git-pull-request" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/07/18/Rd50-zhuangzi-gengsangchu-quanruxin-baorusheng/" class="article-date">
-  <time datetime="2018-07-18T03:33:40.000Z" itemprop="datePublished">2018-07-18</time>
+    <a href="/2018/08/02/git-pull-request/" class="article-date">
+  <time datetime="2018-08-02T08:10:19.000Z" itemprop="datePublished">2018-08-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/rd/">rd</a>
+    <a class="article-category-link" href="/categories/tech/">tech</a>
   </div>
 
   </div>
@@ -94,7 +99,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      「莊子晨讀」02:全汝形抱汝生
+      开源社区协同技能01-git pull request以及之后
     </h1>
   
 
@@ -102,59 +107,69 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>全汝形抱汝生即，學習珍惜當下。<br><strong>一方面，多記錄當下的狀態。</strong><br>從熱愛和信心的角度，加強對當下的感知。<br>當然也要小心，過度記錄導致焦慮、自卑。<br><strong>另一方面，閱讀書籍，感受才智之士對當下的態度、作為。</strong><br><a id="more"></a></p>
-<h4 id="零、念起"><a href="#零、念起" class="headerlink" title="零、念起"></a>零、念起</h4><p>你总在幻想五年、七年后的机会。<br>你总在谋划五年、七年后的事业。<br>但你却难以谋划一个月内的生涯。</p>
-<h4 id="一、「庄子」曰-耳聾眼瞎"><a href="#一、「庄子」曰-耳聾眼瞎" class="headerlink" title="一、「庄子」曰: 耳聾眼瞎"></a>一、「庄子」曰: 耳聾眼瞎</h4><p><a href="https://ctext.org/dictionary.pl?if=gb&amp;id=42326&amp;remap=gb" target="_blank" rel="external">道家 -&gt; 庄子 -&gt; 杂篇 -&gt; 庚桑楚 -&gt; 3</a></p>
-<blockquote>
-<p>「目之与形，吾不知其异也，盲者不能自见」</p>
-<p>自己翻译: 眼睛看到的东西，我却不能辨别出异样，这就像盲人看不见自己一样。</p>
-<p>自己评述: 这里加入盲者，是用来形容自己像盲人一样，看不见东西。</p>
-<p>「心之与形，吾不知其异也，而狂者不能自得。」</p>
-<p>自己翻译: 心灵感受到的东西，我也不能辨别出异样，这就像狂妄者不能感受到他们的心灵一样。</p>
-<p>自己评述: 狂妄者大多缺少自知之明，缺少自知是因为其忽略感受，没有在感受自己的心灵上下功夫。</p>
-</blockquote>
-<h4 id="二、「庄子」評析-兩個矛盾"><a href="#二、「庄子」評析-兩個矛盾" class="headerlink" title="二、「庄子」評析: 兩個矛盾"></a>二、「庄子」評析: 兩個矛盾</h4><p>這裡的情境是: 莊子教授弟子，即便殘缺也能保全志業之道，但其弟子仍不能領悟。遂向莊子描述弟子自己的症狀「目不能見，耳不能聞，心不能感」，簡單的話說便是，「耳聾眼瞎」。</p>
-<p>剛開始，莊子給弟子的教誨是「全汝形，抱汝生，無使汝思慮營營。若此三年，則可以幾此言矣。」這話翻譯的意思是，「保全你的身體本來的樣子，擁抱你當下的生活，不要過度思慮。這樣保持三年，就可以達到你想要的境界了。」</p>
-<p>然而这里存在两个矛盾。也就是这两个矛盾造成了弟子的困扰。这两个矛盾是:</p>
-<ol>
-<li><strong>「全汝形」</strong> 的「形」，「形」的範圍指哪些？是身體？是心靈？還是身、心都包含在內？</li>
-<li><strong>「抱汝生」</strong> ，是否可能？倘若當下的生活令人不甚滿意，那該如何擁抱？</li>
-</ol>
-<h4 id="三、「庄子」我見"><a href="#三、「庄子」我見" class="headerlink" title="三、「庄子」我見:"></a>三、「庄子」我見:</h4><ul>
-<li><p><strong>「全汝形」</strong></p>
-<ul>
-<li>暫且將 <strong>「全汝形」的「形」</strong> 限定為 <strong>「身體」</strong>。那麼 <strong>「全汝形」</strong> 便相當於教導人們要「身體第一」。 <strong>平安健康才是王道。</strong> </li>
-<li>如果研讀歷史，便知，當年冷戰為了所謂的理想，而禁錮一生平安幸福的「有志之士」大有人在。不過當然，受困于安樂生活而碌碌無為的君子，也不在少數。</li>
-<li>關鍵還是要看自己更偏愛哪種生活。比如，<strong>本人肯定更加偏愛「平安健康」。本人就是能從平凡的生活汲取快樂的小母雞。絕對不是追逐太陽的擎天大雁。</strong> </li>
+        <h4 id="0-目标"><a href="#0-目标" class="headerlink" title="0. 目标"></a>0. 目标</h4><ul>
+<li>向怼圈公开仓库投稿</li>
+<li>确认投稿成功并发布</li>
+<li>料理pull request之后事</li>
+</ul>
+<a id="more"></a>
+<h4 id="1-资源"><a href="#1-资源" class="headerlink" title="1. 资源"></a>1. 资源</h4><ul>
+<li><a href="https://stackoverflow.com/questions/14680711/how-to-do-a-github-pull-request" target="_blank" rel="external">SO | git - How to do a GitHub pull request - Stack Overflow</a></li>
+<li><a href="https://help.github.com/articles/about-pull-requests/" target="_blank" rel="external">官档 | About pull requests - User Documentation</a></li>
+<li><a href="https://help.github.com/articles/creating-a-pull-request/" target="_blank" rel="external">官档 | Creating a pull request - User Documentation</a></li>
+<li><a href="https://help.github.com/articles/creating-a-pull-request-from-a-fork/" target="_blank" rel="external">官档 | Creating a pull request from a fork - User Documentation</a></li>
+<li><a href="https://blog.github.com/2015-01-21-how-to-write-the-perfect-pull-request/" target="_blank" rel="external">官档 | How to write the perfect pull request | The GitHub Blog</a></li>
+<li><a href="https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-remotely" target="_blank" rel="external">SO | How do I delete a Git branch both locally and remotely? - Stack Overflow</a></li>
+<li><a href="https://makandracards.com/makandra/621-git-delete-a-branch-local-or-remote" target="_blank" rel="external">card | Git: Delete a branch (local or remote) - makandra dev</a></li>
+<li><a href="https://help.github.com/articles/fetching-a-remote/" target="_blank" rel="external">官档 | Fetching a remote - User Documentation</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html" target="_blank" rel="external">阮一峰 | Git远程操作详解 - 阮一峰的网络日志</a></li>
+<li><a href="https://stackoverflow.com/questions/47630950/how-can-i-switch-to-another-branch-in-git" target="_blank" rel="external">SO | github - How can I switch to another branch in git? - Stack Overflow</a></li>
+</ul>
+<h4 id="2-要点"><a href="#2-要点" class="headerlink" title="2. 要点"></a>2. 要点</h4><ul>
+<li>fork他人仓库到自己的github中来</li>
+<li>git clone刚刚fork的仓库到自己本地电脑中来</li>
+<li>在自己本地电脑做修改<ul>
+<li>这里注意将修改建立在新的分支上，最好不要在master分支上进行修改</li>
+<li>确保master分支只保存finished and approved work</li>
 </ul>
 </li>
-<li><p><strong>「抱汝生」</strong> </p>
-<ul>
-<li><strong>市井流傳，當「知行不一」時，還是改變「知」，比較節省成本。</strong> 此街頭智慧應有相當的道理。如何擁抱當下的生活？即使當下生活滿目瘡痍？本人也打算採取街頭玩法，<strong>改變認知</strong>。</li>
-<li>也許當下生活自有可愛之處？也許會有更糟糕的生活？</li>
-<li>老話說，<strong>調整心態</strong>、<strong>知足常樂</strong> 就是簡潔優美的人生算法。</li>
+<li>git add, git commit, git push到自己的github上<ul>
+<li><code>git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</code></li>
 </ul>
 </li>
-<li><p><strong>解決念起</strong></p>
-<ul>
-<li>回到文初剛開始的雜念 <strong>「思慮遠大，卻無法立足當下」。</strong> 問題出在哪了呢？</li>
-<li>第一，肯定最近身體上過得不錯，能夠 <strong>全汝形</strong>，才有力氣想七想八。</li>
-<li>第二，肯定沒有擁抱生活，不能夠 <strong>抱汝生</strong>，才總想往遠處使勁。</li>
+<li>点击 <code>pull request</code> 请求<ul>
+<li>见下图,从fork仓库的特殊分支(红色)推送到原仓库的master分支(蓝色)</li>
+<li>书写此次pull request的简要说明</li>
 </ul>
 </li>
-<li><p><strong>針對其的方案有什麼呢？</strong></p>
-<ul>
-<li>第一，身體上要進行操練，加強運動、勞動，將多餘的精力排洩出去。</li>
-<li>第二，態度上要珍惜當下。一方面，多做文章、自傳等，或者設計問題列表，更加精確得記錄當下的狀態。<strong>從熱愛和信心的角度，加強對當下的感知。當然要小心，過度記錄導致焦慮、自卑。</strong> 另一方面，閱讀書籍，感受才智之士對當下的態度、作為。</li>
+<li>进入slack gh频道确认pull request成功</li>
+<li>删除本地特殊分支</li>
+<li>取回远程库更新到本地master分支<ul>
+<li>git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</li>
+<li>git pull origin master:master</li>
 </ul>
 </li>
+<li>重新开始第2次pull request</li>
 </ul>
-<p>2018年07月18日11:07:39</p>
+<p><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-07-24-pull-request-compare-changes.png" alt="pull-request-compare-changes"></p>
+<p><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-07-24-pull-request-open-a-new-request.png" alt="pull request的简要说明"></p>
+<p><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-07-24-pull-request-slack-message.png" alt="pull request成功后在slack的gh频道里得到反馈"></p>
+<p><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-07-24-pull-request-successfully-merged.png" alt="成功merged的pull-request"></p>
+<h4 id="3-命令行"><a href="#3-命令行" class="headerlink" title="3. 命令行"></a>3. 命令行</h4><ul>
+<li><code>git clone git@hostname.com:&lt;githubid&gt;/&lt;repo&gt;.git</code> //git clone远程仓库</li>
+<li><code>git branch</code> //查看本地目前所在分支</li>
+<li><code>git checkout -b &lt;branch-name&gt;</code> //本地新建分支</li>
+<li><code>git push origin &lt;branch-name&gt;:master</code> //将本地特殊分支的修改推送至远程库master分支</li>
+<li><code>git checkout &lt;branch-name&gt;</code> //跳转到本地已存在的branch</li>
+<li><code>git branch -d the_local_branch</code> //删除本地已被fully merged in its upstream branch的特殊分支</li>
+<li><code>git pull origin master:master</code> //取回origin主机的master分支，与本地的master分支合并</li>
+</ul>
+<h4 id="changelog"><a href="#changelog" class="headerlink" title="changelog"></a>changelog</h4><p>18-08-03 发布个人博客<br>18-07-27 增补pull request之后<br>18-07-23 init</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangshiying.in/2018/07/18/Rd50-zhuangzi-gengsangchu-quanruxin-baorusheng/" data-id="cjkca8v49000ddbondrvkrrwp" class="article-share-link">Share</a>
+      <a data-url="http://zhangshiying.in/2018/08/02/git-pull-request/" data-id="cjkca8v7l003sdbonzj9ib42t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -163,7 +178,7 @@ ga('send', 'pageview');
     
 <nav id="article-nav">
   
-    <a href="/2018/07/22/week-template/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/08/05/week-0730-0805/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -173,9 +188,9 @@ ga('send', 'pageview');
     </a>
   
   
-    <a href="/2018/07/17/Wrt92-eye-pain-reliever/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/08/02/Rd52-zhuangzi-gengsangchu-huo/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">眼疼药</div>
+      <div class="article-nav-title">「庄子」晨读03:内韄外韄</div>
     </a>
   
 </nav>
