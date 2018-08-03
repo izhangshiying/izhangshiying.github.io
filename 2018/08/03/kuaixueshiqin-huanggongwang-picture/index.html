@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>git diff --name-only | 张诗颖的作品积累</title>
+  <title>快雪時晴圖 | 张诗颖的作品积累</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="bash中如何显示commit之间变化的文件名称？">
+  <meta name="description" content="作者:黃公望  黃公望字子久，號大痴道人，又號一峰，從小就很聰敏，據說有神童般的眼睛，並且通曉經史九流之學，擅長詩文、音律和山水。他居住在富春江一帶，總能領略江山的美麗與壯闊。他畫的山水以北苑為宗，但能經內化轉化出自己的風格。他習慣隨身準備紙筆，時時觀察寫生，只要遇到老樹、奇石、美景，就立刻用筆描寫出他們的模樣形狀。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git diff --name-only">
-<meta property="og:url" content="http://zhangshiying.in/2018/07/09/tech19-git-log/index.html">
+<meta property="og:title" content="快雪時晴圖">
+<meta property="og:url" content="http://zhangshiying.in/2018/08/03/kuaixueshiqin-huanggongwang-picture/index.html">
 <meta property="og:site_name" content="张诗颖的作品积累">
-<meta property="og:description" content="bash中如何显示commit之间变化的文件名称？">
-<meta property="og:updated_time" content="2018-07-09T10:52:45.000Z">
+<meta property="og:description" content="作者:黃公望  黃公望字子久，號大痴道人，又號一峰，從小就很聰敏，據說有神童般的眼睛，並且通曉經史九流之學，擅長詩文、音律和山水。他居住在富春江一帶，總能領略江山的美麗與壯闊。他畫的山水以北苑為宗，但能經內化轉化出自己的風格。他習慣隨身準備紙筆，時時觀察寫生，只要遇到老樹、奇石、美景，就立刻用筆描寫出他們的模樣形狀。">
+<meta property="og:image" content="https://loongese.com/blog/wp-content/uploads/2016/03/%E5%BF%AB%E9%9B%AA%E6%97%B6%E6%99%B4%E5%9B%BE-01.jpg">
+<meta property="og:updated_time" content="2018-08-03T14:41:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git diff --name-only">
-<meta name="twitter:description" content="bash中如何显示commit之间变化的文件名称？">
+<meta name="twitter:title" content="快雪時晴圖">
+<meta name="twitter:description" content="作者:黃公望  黃公望字子久，號大痴道人，又號一峰，從小就很聰敏，據說有神童般的眼睛，並且通曉經史九流之學，擅長詩文、音律和山水。他居住在富春江一帶，總能領略江山的美麗與壯闊。他畫的山水以北苑為宗，但能經內化轉化出自己的風格。他習慣隨身準備紙筆，時時觀察寫生，只要遇到老樹、奇石、美景，就立刻用筆描寫出他們的模樣形狀。">
+<meta name="twitter:image" content="https://loongese.com/blog/wp-content/uploads/2016/03/%E5%BF%AB%E9%9B%AA%E6%97%B6%E6%99%B4%E5%9B%BE-01.jpg">
 <meta name="twitter:creator" content="@coolwuxing">
   
     <link rel="alternative" href="/atom.xml" title="张诗颖的作品积累" type="application/atom+xml">
@@ -76,14 +78,14 @@ ga('send', 'pageview');
   </div>
 </div>
       <div id="main-wrap" class="outer">
-        <section id="main"><article id="post-tech19-git-log" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-kuaixueshiqin-huanggongwang-picture" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/07/09/tech19-git-log/" class="article-date">
-  <time datetime="2018-07-09T10:50:37.000Z" itemprop="datePublished">2018-07-09</time>
+    <a href="/2018/08/03/kuaixueshiqin-huanggongwang-picture/" class="article-date">
+  <time datetime="2018-08-03T14:38:04.000Z" itemprop="datePublished">2018-08-03</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/tech/">tech</a>
+    <a class="article-category-link" href="/categories/rd/">rd</a>
   </div>
 
   </div>
@@ -94,7 +96,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      git diff --name-only
+      快雪時晴圖
     </h1>
   
 
@@ -102,26 +104,24 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>bash中如何显示commit之间变化的文件名称？<br><a id="more"></a></p>
-<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><p>Git log中只显示出commit的编号，却不显示commit之间具体是哪些文件变化了。</p>
-<ol>
-<li>bash中如何显示commit之间变化的文件名称？-&gt;已解决</li>
-<li>bash中如何查看变换的具体内容？</li>
-</ol>
-<h1 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h1><ul>
-<li>Git官方 <a href="https://git-scm.com/docs/git-diff-files" target="_blank" rel="external">Git - git-diff-files Documentation</a></li>
-<li><a href="https://github.com/mcwhittemore/staged-git-files" target="_blank" rel="external">mcwhittemore/staged-git-files: Node module that returns a list of files waiting to be committed.</a></li>
-<li><a href="https://stackoverflow.com/questions/33610682/git-list-of-staged-files#" target="_blank" rel="external">git diff - Git list of staged files - Stack Overflow</a></li>
-<li><a href="https://gist.github.com/betweenbrain/2284129" target="_blank" rel="external">Git command to export only changed files between two commits</a></li>
-<li><a href="https://gist.github.com/betweenbrain/2284129" target="_blank" rel="external">Git command to export only changed files between two commits</a></li>
+        <p>作者:黃公望</p>
+<blockquote>
+<p>黃公望字子久，號大痴道人，又號一峰，從小就很聰敏，據說有神童般的眼睛，並且通曉經史九流之學，擅長詩文、音律和山水。他居住在富春江一帶，總能領略江山的美麗與壯闊。他畫的山水以北苑為宗，但能經內化轉化出自己的風格。他習慣隨身準備紙筆，時時觀察寫生，只要遇到老樹、奇石、美景，就立刻用筆描寫出他們的模樣形狀。</p>
+</blockquote>
+<a id="more"></a>
+<ul>
+<li><a href="http://vr.theatre.ntu.edu.tw/fineart/painter-ch/huanggongwang/huanggongwang.htm" target="_blank" rel="external">黃公望</a></li>
+<li><a href="https://loongese.com/blog/yuan-huanggongwang-kuaixueshiqingtu/19-1" target="_blank" rel="external">龍裔·大觀</a></li>
 </ul>
-<h1 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h1><p><code>git diff --name-only SHA1 SHA2</code></p>
-<p>2018年07月09日18:48:35</p>
+<p><img src="https://loongese.com/blog/wp-content/uploads/2016/03/%E5%BF%AB%E9%9B%AA%E6%97%B6%E6%99%B4%E5%9B%BE-01.jpg" alt="快雪時晴圖(局部)"></p>
+<p>黃公望所處時期為政治黑暗的元末清初。其青年時期層為官一方，后遭人誣陷入獄。中晚年加入“全身教”，并以賣卦為生。晚年藝術風格遂成，留下傳世名作。</p>
+<p>從自然角度看，「快雪時晴圖」表現的是，現實中宋后元代中原地區自然時節進入寒冷時期，常常遭遇早春回寒、飛雪與晴日交織的自然現象。從人文角度看，其表現的士族退隱高山深雪之中的追求寄託。</p>
+<p>退隱居易，出世艱難。由此感慨，陽老不易，龍場難尋。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangshiying.in/2018/07/09/tech19-git-log/" data-id="cjke3kth4004velys25a2eiq7" class="article-share-link">Share</a>
+      <a data-url="http://zhangshiying.in/2018/08/03/kuaixueshiqin-huanggongwang-picture/" data-id="cjke3ktgj0044elyszsif8m91" class="article-share-link">Share</a>
       
       
     </footer>
@@ -130,19 +130,19 @@ ga('send', 'pageview');
     
 <nav id="article-nav">
   
-    <a href="/2018/07/10/tech20-git-clone-ssh-https/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/08/05/week-0730-0805/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          git clone github的公开仓库:ssh方式
+          周报week模板
         
       </div>
     </a>
   
   
-    <a href="/2018/07/09/week-0709-0715/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/08/02/git-pull-request/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">周报week0709-0715广州</div>
+      <div class="article-nav-title">开源社区协同技能01-git pull request以及之后</div>
     </a>
   
 </nav>
