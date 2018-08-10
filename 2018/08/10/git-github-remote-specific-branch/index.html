@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>下载github远程库中的specific branch | 张诗颖的作品积累</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="0.缘由 需要在协同仓库(远程)中创建1个自己主管的新分支，并在本地作修改，推送到远程新分支 整个协同仓库有56个branch 整个协同仓库大小接近500m 目标 本地只与协同仓库(远程)自己主管的那1个新分支建立联系">
+<meta property="og:type" content="article">
+<meta property="og:title" content="下载github远程库中的specific branch">
+<meta property="og:url" content="http://zhangshiying.in/2018/08/10/git-github-remote-specific-branch/index.html">
+<meta property="og:site_name" content="张诗颖的作品积累">
+<meta property="og:description" content="0.缘由 需要在协同仓库(远程)中创建1个自己主管的新分支，并在本地作修改，推送到远程新分支 整个协同仓库有56个branch 整个协同仓库大小接近500m 目标 本地只与协同仓库(远程)自己主管的那1个新分支建立联系">
+<meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-08-10-git-github-remote-specific-branch.png">
+<meta property="og:updated_time" content="2018-08-10T12:02:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="下载github远程库中的specific branch">
+<meta name="twitter:description" content="0.缘由 需要在协同仓库(远程)中创建1个自己主管的新分支，并在本地作修改，推送到远程新分支 整个协同仓库有56个branch 整个协同仓库大小接近500m 目标 本地只与协同仓库(远程)自己主管的那1个新分支建立联系">
+<meta name="twitter:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-08-10-git-github-remote-specific-branch.png">
+<meta name="twitter:creator" content="@coolwuxing">
+  
+    <link rel="alternative" href="/atom.xml" title="张诗颖的作品积累" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  
+  <link href="//fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:700,400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-43935113-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <div id="header-title">
+        <h1 id="logo-wrap">
+          <a href="/" id="logo">张诗颖的作品积累
+          
+          </a>
+        </h1>
+      </div>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://zhangshiying.in"></form>
+      </div>
+    </div>
+  </div>
+</div>
+      <div id="main-wrap" class="outer">
+        <section id="main"><article id="post-git-github-remote-specific-branch" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/10/git-github-remote-specific-branch/" class="article-date">
+  <time datetime="2018-08-10T11:59:39.000Z" itemprop="datePublished">2018-08-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/tech/">tech</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      下载github远程库中的specific branch
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="0-缘由"><a href="#0-缘由" class="headerlink" title="0.缘由"></a>0.缘由</h4><ul>
+<li>需要在协同仓库(远程)中创建1个自己主管的新分支，并在本地作修改，推送到远程新分支</li>
+<li>整个协同仓库有56个branch</li>
+<li>整个协同仓库大小接近500m</li>
+<li>目标<ul>
+<li>本地只与协同仓库(远程)自己主管的那1个新分支建立联系</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<h4 id="1-资源"><a href="#1-资源" class="headerlink" title="1.资源"></a>1.资源</h4><ul>
+<li><a href="https://stackoverflow.com/questions/1911109/how-to-clone-a-specific-git-branch" target="_blank" rel="external">How to clone a specific Git branch? - Stack Overflow</a></li>
+</ul>
+<h4 id="2-命令行"><a href="#2-命令行" class="headerlink" title="2.命令行"></a>2.命令行</h4><p></p><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy="Copy Code"><span class="code-caption-label"></span><a class="code-caption-copy">Copy Code</a></p><p></p>
+<pre><code>git init
+git remote add -t $BRANCH -f origin $REMOTE_REPO
+git pull origin $BRANCH_REMOTE:$BRANCH_LOCAL
+</code></pre><h4 id="3-结果"><a href="#3-结果" class="headerlink" title="3.结果"></a>3.结果</h4><ul>
+<li>本地master分支成功与远程库zsy分支建立联系。</li>
+<li>且只git clone了zsy分支内容到本地目录中。</li>
+</ul>
+<p><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-08-10-git-github-remote-specific-branch.png" alt="git-github-remote-specific-branch"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zhangshiying.in/2018/08/10/git-github-remote-specific-branch/" data-id="cjkny2qr70044exysln1kgsfb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/08/10/git-github-workflow/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          本地与github远程库的workflow
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/08/10/bill-0811-0815-vacation/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          
+            <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/bill/">bill</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/job/">job</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/rd/">rd</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tech/">tech</a><span class="category-list-count">20</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/wk/">wk</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/wrt/">wrt</a><span class="category-list-count">59</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget recents">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/10/pandas-hist-picture/">用pandas做hist图</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/10/git-github-workflow/">本地与github远程库的workflow</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/10/git-github-remote-specific-branch/">下载github远程库中的specific branch</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/10/bill-0811-0815-vacation/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/10/bill-0806-08010/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">25</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+          
+        
+      </div>
+      <div id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a></br>
+      &copy; 2018 张诗颖<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</div>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+    <a href='#logo' id='btn-btt'>^</a>
+  </div>
+</body>
+</html>
