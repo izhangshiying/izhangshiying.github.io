@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>duw-git-collaboration-issue | 张诗颖的作品积累</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="[42h][S]怼刊协同窘境-git push和git pull均被reject,git fetch + git merge处理后can not merge,需要手动修改冲突的地方吗？  (优先级别标定-&amp;gt; XXXL|XXL|XL|L|M|S 参考: TEE-style)  背景~ 阐述 记录/问题/事件/… 发生的背景  本地修改仓库DUW分支上的文件 73w_draft.md 后 将修改">
+<meta property="og:type" content="article">
+<meta property="og:title" content="duw-git-collaboration-issue">
+<meta property="og:url" content="http://zhangshiying.in/2018/09/13/duw-git-collaboration-issue/index.html">
+<meta property="og:site_name" content="张诗颖的作品积累">
+<meta property="og:description" content="[42h][S]怼刊协同窘境-git push和git pull均被reject,git fetch + git merge处理后can not merge,需要手动修改冲突的地方吗？  (优先级别标定-&amp;gt; XXXL|XXL|XL|L|M|S 参考: TEE-style)  背景~ 阐述 记录/问题/事件/… 发生的背景  本地修改仓库DUW分支上的文件 73w_draft.md 后 将修改">
+<meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-09-13-git-push-rejected.png">
+<meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-09-13-git-pull-rejected.png">
+<meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-09-04-cannot-merge.png">
+<meta property="og:updated_time" content="2018-09-13T06:31:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="duw-git-collaboration-issue">
+<meta name="twitter:description" content="[42h][S]怼刊协同窘境-git push和git pull均被reject,git fetch + git merge处理后can not merge,需要手动修改冲突的地方吗？  (优先级别标定-&amp;gt; XXXL|XXL|XL|L|M|S 参考: TEE-style)  背景~ 阐述 记录/问题/事件/… 发生的背景  本地修改仓库DUW分支上的文件 73w_draft.md 后 将修改">
+<meta name="twitter:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-09-13-git-push-rejected.png">
+<meta name="twitter:creator" content="@coolwuxing">
+  
+    <link rel="alternative" href="/atom.xml" title="张诗颖的作品积累" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  
+  <link href="//fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:700,400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-43935113-3', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <div id="header-title">
+        <h1 id="logo-wrap">
+          <a href="/" id="logo">张诗颖的作品积累
+          
+          </a>
+        </h1>
+      </div>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://zhangshiying.in"></form>
+      </div>
+    </div>
+  </div>
+</div>
+      <div id="main-wrap" class="outer">
+        <section id="main"><article id="post-duw-git-collaboration-issue" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/13/duw-git-collaboration-issue/" class="article-date">
+  <time datetime="2018-09-13T06:30:32.000Z" itemprop="datePublished">2018-09-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/tech/">tech</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      duw-git-collaboration-issue
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[42h][S]怼刊协同窘境-git push和git pull均被reject,git fetch + git merge处理后can not merge,需要手动修改冲突的地方吗？</p>
+<blockquote>
+<p>(优先级别标定-&gt; XXXL|XXL|XL|L|M|S 参考: <a href="https://github.com/DebugUself/du4proto/wiki/RlShortNames#%E4%BC%98%E5%85%88%E7%BA%A7" target="_blank" rel="external">TEE-style</a>)</p>
+</blockquote>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>~ 阐述 记录/问题/事件/… 发生的背景</p>
+<ul>
+<li>本地修改仓库DUW分支上的文件 73w_draft.md 后</li>
+<li>将修改 git push 到du4proto DUW分支 被 rejected</li>
+<li>试图用git pull 取回du4proto DUW分支更新 也被 rejected</li>
+</ul>
+<a id="more"></a>
+<p><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-09-13-git-push-rejected.png" alt="git-push-rejected"></p>
+<p><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-09-13-git-pull-rejected.png" alt="git-pull-rejected"></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>~ 先给出自己的态度以及尝试</p>
+<ul>
+<li>猜测，这是由于俺和其他怼员在各自的本地，对同一份文件 73w_draft.md 的相同lines作出修改，导致了协同事故</li>
+</ul>
+<h2 id="尝试"><a href="#尝试" class="headerlink" title="尝试"></a>尝试</h2><p>~ 尝试的过程/现象/…收集</p>
+<ul>
+<li><p>根据终端反馈，整理出努力的关键词</p>
+<ul>
+<li><strong>non-fast-forward</strong></li>
+<li><strong>git fetch + git merge</strong></li>
+<li><strong>merge conflicts</strong></li>
+</ul>
+</li>
+<li><p><strong>non-fast-forward</strong></p>
+<ul>
+<li>根据 <a href="https://help.github.com/articles/dealing-with-non-fast-forward-errors/" target="_blank" rel="external">Dealing with non-fast-forward errors - User Documentation</a> </li>
+<li>提示 <em>You can fix this by fetching and merging the changes made on the remote branch with the changes that you have made locally:</em><ul>
+<li><em>git fetch origin [分支名]# Fetches updates made to an online repository`</em></li>
+<li><em>git merge origin [分支名]:YOUR_BRANCH_NAME # Merges updates made online with your local work</em></li>
+</ul>
+</li>
+<li>尝试 git fetch 和 git merge</li>
+</ul>
+</li>
+<li><strong>git fetch + git merge</strong><ul>
+<li>远程库分支为:DUW;本地分支为:master    </li>
+<li>终端输入 <code>git fetch origin DUW</code> 和 <code>git merge origin DUW:master</code></li>
+<li>终端反馈<ul>
+<li><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-09-04-cannot-merge.png" alt="cannot-merge"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>merge conflicts</strong><ul>
+<li>根据 <a href="https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/" target="_blank" rel="external">Resolving a merge conflict using the command line - User Documentation</a></li>
+<li>提示 <em>You can resolve merge conflicts using the command line and a text editor.</em><ul>
+<li><em>if you and another person both edited the file styleguide.md on the same lines in different branches of the same Git repository, you’ll get a merge conflict error when you try to merge these branches. You must resolve this merge conflict with a new commit before you can merge these branches.</em> </li>
+<li>这段话是说，当冲突发生在同一个文件的修改时，必须先手动解决冲突，再进行新的提交commit</li>
+<li><em>Open your favorite text editor, such as Atom, and navigate to the file that has merge conflicts.To see the beginning of the merge conflict in your file, search the file for the conflict marker &lt;&lt;&lt;&lt;&lt;&lt;&lt;. When you open the file in your text editor, you’ll see the changes from the HEAD or base branch after the line &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD.</em></li>
+<li>这段话是说，编辑器会自动显示有冲突的地方，有 conflict marker &lt;&lt;&lt;&lt;&lt;&lt;&lt;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>conflict marker</strong><ul>
+<li>根据上述，似乎有些editor能够自动识别conflict，但俺的sublime text3 不能</li>
+<li>考虑安装plugin <a href="https://github.com/Zeeker/sublime-GitConflictResolver" target="_blank" rel="external">Zeeker/sublime-GitConflictResolver: A little plugin to help you resolving this nasty conflicts.</a>, 作为conflict marker</li>
+<li>但是又担心方向错了</li>
+</ul>
+</li>
+</ul>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
+<li>现在俺的方向是<ul>
+<li>手动修改目标文件冲突的地方</li>
+<li>下载 conflict marker</li>
+</ul>
+</li>
+<li>请问<ul>
+<li><strong>手动修改的方向对吗？</strong></li>
+<li><strong>怎样才能让俺拿回du4proto DUW分支的更新，同时把俺本地的修改推送到du4proto DUW分支呢？</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="你可以这样提供帮助"><a href="#你可以这样提供帮助" class="headerlink" title="你可以这样提供帮助"></a>你可以这样提供帮助</h3><ul>
+<li>厘清问题，即，本次问题到底遭遇了啥？</li>
+<li>给予资源，即，有什么相关文档可以用来处理本次问题？</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zhangshiying.in/2018/09/13/duw-git-collaboration-issue/" data-id="cjm074nbw0044xion0bkqgnin" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/09/13/how-to-issue/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">HOW-TO-ISSUE</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          
+            <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/bill/">bill</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/job/">job</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/rd/">rd</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/relax/">relax</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tech/">tech</a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/wk/">wk</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/wrt/">wrt</a><span class="category-list-count">60</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget recents">
+      <ul>
+        
+          <li>
+            <a href="/2018/09/13/duw-git-collaboration-issue/">duw-git-collaboration-issue</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/13/how-to-issue/">HOW-TO-ISSUE</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/13/home-dream3-function/">home-dream3-function</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/03/rude-decision-old-strategy/">旧时光战略</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/03/three-twist-in-my-life/">熊本的3次转折</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">25</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">25</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+          
+        
+      </div>
+      <div id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a></br>
+      &copy; 2018 张诗颖<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</div>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+    <a href='#logo' id='btn-btt'>^</a>
+  </div>
+</body>
+</html>
