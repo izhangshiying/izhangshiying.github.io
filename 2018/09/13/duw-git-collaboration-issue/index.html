@@ -14,7 +14,10 @@
 <meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-09-13-git-push-rejected.png">
 <meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-09-13-git-pull-rejected.png">
 <meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-09-04-cannot-merge.png">
-<meta property="og:updated_time" content="2018-09-13T06:31:16.000Z">
+<meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-09-14-insight-network-NBR-bear-conflict1.png">
+<meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-09-14-insight-network-NBR-bear-conflict2.png">
+<meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-09-14-insight-network-NBR-bear-conflict3.png">
+<meta property="og:updated_time" content="2018-09-14T08:39:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="duw-git-collaboration-issue">
 <meta name="twitter:description" content="[42h][S]怼刊协同窘境-git push和git pull均被reject,git fetch + git merge处理后can not merge,需要手动修改冲突的地方吗？  (优先级别标定-&amp;gt; XXXL|XXL|XL|L|M|S 参考: TEE-style)  背景~ 阐述 记录/问题/事件/… 发生的背景  本地修改仓库DUW分支上的文件 73w_draft.md 后 将修改">
@@ -170,7 +173,7 @@ ga('send', 'pageview');
 </ul>
 </li>
 </ul>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
 <li>现在俺的方向是<ul>
 <li>手动修改目标文件冲突的地方</li>
 <li>下载 conflict marker</li>
@@ -182,15 +185,29 @@ ga('send', 'pageview');
 </ul>
 </li>
 </ul>
-<h3 id="你可以这样提供帮助"><a href="#你可以这样提供帮助" class="headerlink" title="你可以这样提供帮助"></a>你可以这样提供帮助</h3><ul>
+<h2 id="你可以这样提供帮助"><a href="#你可以这样提供帮助" class="headerlink" title="你可以这样提供帮助"></a>你可以这样提供帮助</h2><ul>
 <li>厘清问题，即，本次问题到底遭遇了啥？</li>
 <li>给予资源，即，有什么相关文档可以用来处理本次问题？</li>
 </ul>
+<h2 id="有效回复"><a href="#有效回复" class="headerlink" title="有效回复"></a>有效回复</h2><ul>
+<li>@leilayanhui 你在克隆 DUW 分支时, 是否使用 wiki 里 <a href="https://github.com/DebugUself/du4proto/wiki/HbUsageGithubBranch#%E6%9C%AC%E5%9C%B0%E5%A6%82%E4%BD%95%E9%A2%84%E9%98%B2%E5%AD%A4%E5%AD%90%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6%E5%B0%86%E4%BB%93%E5%BA%93%E4%B8%AD%E5%B7%B2%E6%9C%89%E7%9A%84%E5%88%86%E6%94%AF%E6%8B%89%E5%88%B0%E4%BD%A0%E6%9C%AC%E5%9C%B0%E7%94%B5%E8%84%91%E9%87%8C" target="_blank" rel="external">本地如何预防孤子分支合并</a> 的方法</li>
+</ul>
+<h2 id="后续方案"><a href="#后续方案" class="headerlink" title="后续方案"></a>后续方案</h2><ul>
+<li>暂定解决方案<ul>
+<li>参考 <a href="https://github.com/DebugUself/du4proto/wiki/HbUsageGithubBranch#%E4%B8%87%E4%B8%80%E6%9C%AC%E5%9C%B0%E5%89%AF%E6%9C%AC%E8%A2%AB%E6%B1%A1%E6%9F%93%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" target="_blank" rel="external">本地如何预防孤子分支合并-万一本地副本被污染的解决方案</a></li>
+<li>将本地文件夹判定为 <strong>被污染文件</strong></li>
+<li>重新clone新复本</li>
+</ul>
+</li>
+</ul>
+<h2 id="再现案发现场"><a href="#再现案发现场" class="headerlink" title="再现案发现场"></a>再现案发现场</h2><pre><code>+ 如下图
++ DU73w出现的意外
+</code></pre><p><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-09-14-insight-network-NBR-bear-conflict1.png" alt="insight-network-NBR-bear-conflict1"><br><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-09-14-insight-network-NBR-bear-conflict2.png" alt="insight-network-NBR-bear-conflict3"><br><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-09-14-insight-network-NBR-bear-conflict3.png" alt="insight-network-NBR-bear-conflict2"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangshiying.in/2018/09/13/duw-git-collaboration-issue/" data-id="cjm074nbw0044xion0bkqgnin" class="article-share-link">Share</a>
+      <a data-url="http://zhangshiying.in/2018/09/13/duw-git-collaboration-issue/" data-id="cjm1sfgs5004evwonorb7oitz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -198,6 +215,15 @@ ga('send', 'pageview');
   
     
 <nav id="article-nav">
+  
+    <a href="/2018/09/14/duw-story-git-collaboration-bloodcase/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          熊本🐻 -&gt; 怼刊协同血案-本地污染后需重新clone复本
+        
+      </div>
+    </a>
   
   
     <a href="/2018/09/13/how-to-issue/" id="article-nav-older" class="article-nav-link-wrap">
@@ -219,7 +245,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/bill/">bill</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/job/">job</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/rd/">rd</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/relax/">relax</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tech/">tech</a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/wk/">wk</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/wrt/">wrt</a><span class="category-list-count">60</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/bill/">bill</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/job/">job</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/rd/">rd</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/relax/">relax</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tech/">tech</a><span class="category-list-count">26</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/wk/">wk</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/wrt/">wrt</a><span class="category-list-count">60</span></li></ul>
     </div>
   </div>
 
@@ -231,6 +257,10 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget recents">
       <ul>
+        
+          <li>
+            <a href="/2018/09/14/duw-story-git-collaboration-bloodcase/">熊本🐻 -&gt; 怼刊协同血案-本地污染后需重新clone复本</a>
+          </li>
         
           <li>
             <a href="/2018/09/13/duw-git-collaboration-issue/">duw-git-collaboration-issue</a>
@@ -248,10 +278,6 @@ ga('send', 'pageview');
             <a href="/2018/09/03/rude-decision-old-strategy/">旧时光战略</a>
           </li>
         
-          <li>
-            <a href="/2018/09/03/three-twist-in-my-life/">熊本的3次转折</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -263,7 +289,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">25</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">25</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">25</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">25</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
