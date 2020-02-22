@@ -3,20 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>下载github远程库中的specific branch | 丰富以及丰富的危险</title>
+  <title>Archives: 2020/2 | 丰富以及丰富的危险</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="0.缘由 需要在协同仓库(远程)中创建1个自己主管的新分支，并在本地作修改，推送到远程新分支 整个协同仓库有56个branch 整个协同仓库大小接近500m 目标 本地只与协同仓库(远程)自己主管的那1个新分支建立联系">
-<meta property="og:type" content="article">
-<meta property="og:title" content="下载github远程库中的specific branch">
-<meta property="og:url" content="http://zhangshiying.in/2018/08/10/git-github-remote-specific-branch/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="丰富以及丰富的危险">
+<meta property="og:url" content="http://zhangshiying.in/archives/2020/02/index.html">
 <meta property="og:site_name" content="丰富以及丰富的危险">
-<meta property="og:description" content="0.缘由 需要在协同仓库(远程)中创建1个自己主管的新分支，并在本地作修改，推送到远程新分支 整个协同仓库有56个branch 整个协同仓库大小接近500m 目标 本地只与协同仓库(远程)自己主管的那1个新分支建立联系">
-<meta property="og:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-08-10-git-github-remote-specific-branch.png">
-<meta property="og:updated_time" content="2018-09-02T10:58:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="下载github远程库中的specific branch">
-<meta name="twitter:description" content="0.缘由 需要在协同仓库(远程)中创建1个自己主管的新分支，并在本地作修改，推送到远程新分支 整个协同仓库有56个branch 整个协同仓库大小接近500m 目标 本地只与协同仓库(远程)自己主管的那1个新分支建立联系">
-<meta name="twitter:image" content="http://p3gjd3dx2.bkt.clouddn.com/2018-08-10-git-github-remote-specific-branch.png">
+<meta name="twitter:title" content="丰富以及丰富的危险">
 <meta name="twitter:creator" content="@coolwuxing">
   
     <link rel="alternative" href="/atom.xml" title="丰富以及丰富的危险" type="application/atom+xml">
@@ -78,87 +72,39 @@ ga('send', 'pageview');
   </div>
 </div>
       <div id="main-wrap" class="outer">
-        <section id="main"><article id="post-git-github-remote-specific-branch" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/08/10/git-github-remote-specific-branch/" class="article-date">
-  <time datetime="2018-08-10T11:59:39.000Z" itemprop="datePublished">2018-08-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/tech/">tech</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      下载github远程库中的specific branch
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/02/22/2020-02-22-WinterInCity-chp0/" class="archive-article-date">
+  <time datetime="2020-02-22T13:01:27.000Z" itemprop="datePublished">Feb 22</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/02/22/2020-02-22-WinterInCity-chp0/">冬风恋斯城 第 0 章</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="0-缘由"><a href="#0-缘由" class="headerlink" title="0.缘由"></a>0.缘由</h4><ul>
-<li>需要在协同仓库(远程)中创建1个自己主管的新分支，并在本地作修改，推送到远程新分支</li>
-<li>整个协同仓库有56个branch</li>
-<li>整个协同仓库大小接近500m</li>
-<li>目标<ul>
-<li>本地只与协同仓库(远程)自己主管的那1个新分支建立联系</li>
-</ul>
-</li>
-</ul>
-<a id="more"></a>
-<h4 id="1-资源"><a href="#1-资源" class="headerlink" title="1.资源"></a>1.资源</h4><ul>
-<li><a href="https://stackoverflow.com/questions/1911109/how-to-clone-a-specific-git-branch" target="_blank" rel="external">How to clone a specific Git branch? - Stack Overflow</a></li>
-</ul>
-<h4 id="2-命令行"><a href="#2-命令行" class="headerlink" title="2.命令行"></a>2.命令行</h4><p><code>mkdir $LOCALFOLDER</code></p>
-<p><code>cd $LOCALFOLDER</code></p>
-<p><code>git init</code></p>
-<p><code>git remote add -t $BRANCH -f origin $REMOTE_REPO</code></p>
-<p><code>git pull origin $BRANCH_REMOTE:$BRANCH_LOCAL</code></p>
-<h4 id="3-结果"><a href="#3-结果" class="headerlink" title="3.结果"></a>3.结果</h4><ul>
-<li>本地master分支成功与远程库zsy分支建立联系。</li>
-<li>且只git clone了zsy分支内容到本地目录中。</li>
-</ul>
-<p><img src="http://p3gjd3dx2.bkt.clouddn.com/2018-08-10-git-github-remote-specific-branch.png" alt="git-github-remote-specific-branch"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://zhangshiying.in/2018/08/10/git-github-remote-specific-branch/" data-id="ck6xm62v8000lmdonmatacswt" class="article-share-link">Share</a>
-      
-      
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2018/08/10/git-github-workflow/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          本地与github远程库的workflow
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/08/02/git-pull-request/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">开源社区协同技能01-git pull request以及之后</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
 </section>
         
