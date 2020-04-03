@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>自怼圈的考古 | 丰富及丰富的危险</title>
+  <title>用 pyenv 配置隔离环境 | 丰富及丰富的危险</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一些早已重复的故事。">
+  <meta name="description" content="背景 因聚会主题演讲触发,希望试用小众画图模块 pysrc/fractal: Draw fractal image by python.. 此模块在 github 上,截止 2019 年也只有 17 个 stars,并非常规模块. 直觉上,尝试小众模块时,应该与系统环境隔离. 前置条件 俺的配置,macOS Mojave/ 10.14.4. 已成功安装 pyenv, 并检验过.">
+<meta name="keywords" content="tech">
 <meta property="og:type" content="article">
-<meta property="og:title" content="自怼圈的考古">
-<meta property="og:url" content="http://zhangshiying.in/2018/07/05/tech16-play-in-DU-hongfeng/index.html">
+<meta property="og:title" content="用 pyenv 配置隔离环境">
+<meta property="og:url" content="http://zhangshiying.in/2019/12/09/2019-12-18-pyenv-figure-fractal/index.html">
 <meta property="og:site_name" content="丰富及丰富的危险">
-<meta property="og:description" content="一些早已重复的故事。">
-<meta property="og:updated_time" content="2018-07-06T02:29:34.000Z">
+<meta property="og:description" content="背景 因聚会主题演讲触发,希望试用小众画图模块 pysrc/fractal: Draw fractal image by python.. 此模块在 github 上,截止 2019 年也只有 17 个 stars,并非常规模块. 直觉上,尝试小众模块时,应该与系统环境隔离. 前置条件 俺的配置,macOS Mojave/ 10.14.4. 已成功安装 pyenv, 并检验过.">
+<meta property="og:updated_time" content="2020-04-03T11:38:08.007Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自怼圈的考古">
-<meta name="twitter:description" content="一些早已重复的故事。">
+<meta name="twitter:title" content="用 pyenv 配置隔离环境">
+<meta name="twitter:description" content="背景 因聚会主题演讲触发,希望试用小众画图模块 pysrc/fractal: Draw fractal image by python.. 此模块在 github 上,截止 2019 年也只有 17 个 stars,并非常规模块. 直觉上,尝试小众模块时,应该与系统环境隔离. 前置条件 俺的配置,macOS Mojave/ 10.14.4. 已成功安装 pyenv, 并检验过.">
 <meta name="twitter:creator" content="@coolwuxing">
   
     <link rel="alternative" href="/atom.xml" title="丰富及丰富的危险" type="application/atom+xml">
@@ -76,16 +77,12 @@ ga('send', 'pageview');
   </div>
 </div>
       <div id="main-wrap" class="outer">
-        <section id="main"><article id="post-tech16-play-in-DU-hongfeng" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-2019-12-18-pyenv-figure-fractal" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/07/05/tech16-play-in-DU-hongfeng/" class="article-date">
-  <time datetime="2018-07-05T01:28:49.000Z" itemprop="datePublished">2018-07-05</time>
+    <a href="/2019/12/09/2019-12-18-pyenv-figure-fractal/" class="article-date">
+  <time datetime="2019-12-09T06:17:36.000Z" itemprop="datePublished">2019-12-09</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/tech/">tech</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -94,7 +91,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      自怼圈的考古
+      用 pyenv 配置隔离环境
     </h1>
   
 
@@ -102,68 +99,117 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一些早已重复的故事。<br><a id="more"></a></p>
-<h2 id="发掘过程"><a href="#发掘过程" class="headerlink" title="发掘过程"></a>发掘过程</h2><ul>
-<li>起点:怼圈planet</li>
-<li>过程:<ul>
-<li><a href="https://github.com/DebugUself" target="_blank" rel="external">Debug U self ~ 自怼圈</a></li>
-<li><a href="https://github.com/DebugUself/planet" target="_blank" rel="external">DebugUself/planet: planet 4 DebugUself</a></li>
-<li><a href="http://du.zoomquiet.io/planet/" target="_blank" rel="external">Planet DebugUself</a></li>
-<li><a href="http://blog.zoomquiet.io/" target="_blank" rel="external">| 是也乎(￣▽￣) | ZoomQuiet.io</a></li>
-<li><strong>the trick</strong> <a href="http://zoomquiet.io/collection.html" target="_blank" rel="external">ZoomQuiet.io collection mapping</a></li>
-<li><a href="http://zoomquiet.io/collection.html" target="_blank" rel="external">ZoomQuiet.io collection mapping {by gen4dot2htm.py v11.10.27 at:160217 11:09:36,660754}</a></li>
-<li><a href="http://devrel.zoomquiet.top/tree/" target="_blank" rel="external">{ZqDevRel} index tree export into iFrame - ScrapBook Collection by Zoom.Quiet</a></li>
-</ul>
-</li>
-<li>发现:<ul>
-<li><a href="http://devrel.zoomquiet.top/data/20120910172131/index.html#works" target="_blank" rel="external">洪峰欢迎您的到访！</a></li>
-</ul>
-</li>
-<li>搜索:<ul>
-<li><a href="http://f13s.info/hongfeng.html" target="_blank" rel="external">洪峰的个人主页，关于黑客、创客、宽客、慕客，“维纳-波普尔”第三世界，等等。</a></li>
-<li><a href="http://f13s.info/Blog/how-to-study-English.html" target="_blank" rel="external">如何学好英语？</a>-&gt;”数专多能”</li>
-</ul>
-</li>
-<li>宝贝:<ul>
-<li><a href="http://f13s.info/literature/Preface-of-TengWang-Manson/three-statements-about-the-essay.mp3" target="_blank" rel="external">滕王阁序解说.mp3</a></li>
+        <h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><ul>
+<li>因聚会主题演讲触发,希望试用小众画图模块 <a href="https://github.com/pysrc/fractal" target="_blank" rel="external">pysrc/fractal: Draw fractal image by python.</a>.</li>
+<li>此模块在 github 上,截止 2019 年也只有 17 个 stars,并非常规模块.</li>
+<li>直觉上,尝试小众模块时,应该与系统环境隔离.</li>
+<li>前置条件<ul>
+<li>俺的配置,macOS Mojave/ 10.14.4.</li>
+<li>已成功安装 pyenv, 并检验过.</li>
 </ul>
 </li>
 </ul>
-<h2 id="成果应用"><a href="#成果应用" class="headerlink" title="成果应用"></a>成果应用</h2><ul>
-<li>在debuguself的slack中，建立colletion频道。</li>
+<a id="more"></a>
+<h4 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h4><ul>
+<li>配置 1 个专门用来尝试 fractal 的环境.</li>
+</ul>
+<h4 id="分解"><a href="#分解" class="headerlink" title="分解"></a>分解</h4><ul>
+<li>查一下自己已经有的工程环境<ul>
+<li>是否有 1 个纯净的版本环境可供复制?</li>
+</ul>
+</li>
+<li>查一下 pysrc/fractal 使用 python3 还是 2</li>
+<li>创建适合 pysrc/fractal 的版本环境</li>
+</ul>
+<h4 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h4><ul>
+<li>纯净的母环境<ul>
+<li>首先,查看俺已有的虚拟环境们,并查看其中是否存在纯净的母环境?<ul>
+<li>纯净母环境方便衍生新的虚拟环境.</li>
+</ul>
+</li>
+<li>判断: 似乎有 1 个纯净环境 -&gt; <code>3.7.4</code>,那么接下来就是复制该环境…</li>
+</ul>
+</li>
 </ul>
 <p></p><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy="Copy Code"><span class="code-caption-label"></span><a class="code-caption-copy">Copy Code</a></p><p></p>
-<pre><code>分享大妈「私人资料收集」中的有趣故事,见http://zoomquiet.io/collection.html
+<pre><code>$ pyenv versions
+* system (set by /Users/zsy/.pyenv/version)
+  3.7.4
+  3.7.4/envs/374blog
+  374blog
 </code></pre><ul>
-<li>后删除colletion频道，为保持深度，减少广度。</li>
+<li>复制<ul>
+<li>从纯净的 3.7.4 母环境中复制出新的环境,并给其命名</li>
+<li><code>$ pyenv virtualenv 3.7.4 figure</code></li>
+<li><code>3.7.4</code> 是纯净的母环境</li>
+<li><code>figure</code> 是俺想要创建的新环境,俺给其命名为 <code>figure</code> <ul>
+<li>即,在此环境下,俺一般喜欢干画图的事…</li>
 </ul>
-<p>2018年07月04日14:02:44</p>
+</li>
+</ul>
+</li>
+<li>切换<ul>
+<li>从母环境切换到刚刚创建的特殊环境 <code>figure</code> 里</li>
+<li><code>$pyenv local figure</code></li>
+</ul>
+</li>
+<li>配置<ul>
+<li>在 <code>figure</code> 环境下,安装俺常用的画图 module</li>
+<li><code>$ pip3 install fractal</code></li>
+</ul>
+</li>
+<li>目录<ul>
+<li>但是这过程里,俺十分迷惑的是, <strong>pyenv 到底在哪个目录下有效?</strong></li>
+<li>俺这次是直接在画图的工作目录下,绑定 <code>figure</code> 环境;</li>
+<li>但是当切换到新的工作目录时,怎么复制 <code>figure</code> 环境呢?</li>
+</ul>
+</li>
+</ul>
+<p></p><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy="Copy Code"><span class="code-caption-label"></span><a class="code-caption-copy">Copy Code</a></p><p></p>
+<pre><code>$ cd zsy.fractal
+(figure) zsydeMacBook-Air:zsy.fractal zsy$ python3
+Python 3.7.4 (default, Nov 15 2019, 12:23:31) 
+&gt;&gt;&gt; from fractal import Pen
+&gt;&gt;&gt;
+</code></pre><h4 id="Refer"><a href="#Refer" class="headerlink" title="Refer"></a>Refer</h4><ul>
+<li><a href="https://github.com/DebugUself/debuguself.github.io/blob/master/_posts/scm4du/2018-07-30-pyenv101.md" target="_blank" rel="external">debuguself.github.io/2018-07-30-pyenv101.md at master · DebugUself/debuguself.github.io</a></li>
+<li><a href="https://blog.101.camp/TS/190919-pyenv-finally-intro/" target="_blank" rel="external">TS3: Pyenv 最终介绍 — Blogging 蟒营™ 博客</a></li>
+<li><a href="https://www.bilibili.com/video/av77693412?from=search&amp;seid=6335516483445440874" target="_blank" rel="external">191006_pyenv-usage<em>20-00-50</em>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</a></li>
+<li><a href="https://github.com/pyenv/pyenv-virtualenv" target="_blank" rel="external">pyenv/pyenv-virtualenv: a pyenv plugin to manage virtualenv (a.k.a. python-virtualenv)</a></li>
+<li><a href="https://github.com/pyenv/pyenv" target="_blank" rel="external">pyenv/pyenv: Simple Python version management</a></li>
+</ul>
+<h3 id="changlog"><a href="#changlog" class="headerlink" title="changlog"></a>changlog</h3><ul>
+<li>2020-01-10 .5h 完成</li>
+<li>2020-01-08 .5h 试验</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangshiying.in/2018/07/05/tech16-play-in-DU-hongfeng/" data-id="ck8k47gja001jvtong8ra7miy" class="article-share-link">Share</a>
+      <a data-url="http://zhangshiying.in/2019/12/09/2019-12-18-pyenv-figure-fractal/" data-id="ck8k47gi1000bvton5wgi266y" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tech/">tech</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2018/07/06/tech17-image-link-st3/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/12/09/2019-12-09gitconfig/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          ST3自动生成图片链接
+          git config 全球一致
         
       </div>
     </a>
   
   
-    <a href="/2018/07/04/tech15-week-pay-bills/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/12/08/2019-12-08findHome4polbarDev/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">250元周消费</div>
+      <div class="article-nav-title">瑶台镜寻家</div>
     </a>
   
 </nav>
@@ -186,6 +232,27 @@ ga('send', 'pageview');
 
   
     
+    <div class="widget-wrap">
+      <h3 class="widget-title">Related</h3>
+      <div class="widget recents">
+        <ul>
+  
+    <li>
+      <a href="/2019/12/08/2019-12-08findHome4polbarDev/">瑶台镜寻家</a>
+    </li>
+  
+    <li>
+      <a href="/2019/12/15/191214-TS04-handy-pydoc/">远山近水 pydoc</a>
+    </li>
+  
+    <li>
+      <a href="/2019/12/09/2019-12-09gitconfig/">git config 全球一致</a>
+    </li>
+  
+        </ul>
+      </div>
+    </div>
+
   
     
   <div class="widget-wrap">
