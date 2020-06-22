@@ -3,18 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>hexo笔记2——全文不展开、更换theme、显示categories | 丰富及丰富的危险</title>
+  <title>Category: log | 丰富及丰富的危险</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="注: 博客=基于hexo构建的博客 0.本文常用命令~ 本文中将用到的常用命令cd documents/zsy.hexo/hexohexo new &amp;quot;filename&amp;quot;hexo ghexo shttp://localhost:4000/Users/zsy/Documents/zsy.hexo/">
-<meta property="og:type" content="article">
-<meta property="og:title" content="hexo笔记2——全文不展开、更换theme、显示categories">
-<meta property="og:url" content="http://zhangshiying.in/2018/02/01/hexo2/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="丰富及丰富的危险">
+<meta property="og:url" content="http://zhangshiying.in/categories/log/index.html">
 <meta property="og:site_name" content="丰富及丰富的危险">
-<meta property="og:description" content="注: 博客=基于hexo构建的博客 0.本文常用命令~ 本文中将用到的常用命令cd documents/zsy.hexo/hexohexo new &amp;quot;filename&amp;quot;hexo ghexo shttp://localhost:4000/Users/zsy/Documents/zsy.hexo/">
-<meta property="og:updated_time" content="2018-08-07T07:27:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo笔记2——全文不展开、更换theme、显示categories">
-<meta name="twitter:description" content="注: 博客=基于hexo构建的博客 0.本文常用命令~ 本文中将用到的常用命令cd documents/zsy.hexo/hexohexo new &amp;quot;filename&amp;quot;hexo ghexo shttp://localhost:4000/Users/zsy/Documents/zsy.hexo/">
+<meta name="twitter:title" content="丰富及丰富的危险">
 <meta name="twitter:creator" content="@coolwuxing">
   
     <link rel="alternative" href="/atom.xml" title="丰富及丰富的危险" type="application/atom+xml">
@@ -76,94 +72,39 @@ ga('send', 'pageview');
   </div>
 </div>
       <div id="main-wrap" class="outer">
-        <section id="main"><article id="post-hexo2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/02/01/hexo2/" class="article-date">
-  <time datetime="2018-02-01T13:42:26.000Z" itemprop="datePublished">2018-02-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/tech/">tech</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      hexo笔记2——全文不展开、更换theme、显示categories
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/06/22/2020-06-22_0628_wkly/" class="archive-article-date">
+  <time datetime="2020-06-22T06:03:39.000Z" itemprop="datePublished">Jun 22</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/06/22/2020-06-22_0628_wkly/">06.21 ~ 06.28</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>注: 博客=基于hexo构建的博客</p>
-<h3 id="0-本文常用命令"><a href="#0-本文常用命令" class="headerlink" title="0.本文常用命令"></a>0.本文常用命令</h3><p>~ 本文中将用到的常用命令<br><code>cd documents/zsy.hexo/hexo</code><br><code>hexo new &quot;filename&quot;</code><br><code>hexo g</code><br><code>hexo s</code><br><code>http://localhost:4000/Users/zsy/Documents/zsy.hexo/</code></p>
-<a id="more"></a>
-<h3 id="1-全文不展开"><a href="#1-全文不展开" class="headerlink" title="1.全文不展开"></a>1.全文不展开</h3><p>~ 本节实现功能为，博客home页文章不展开全文，只显示摘要</p>
-<ul>
-<li>参考: <a href="https://ohmyarch.github.io/2014/12/24/Hexo%E4%B8%BB%E9%A1%B5%E6%98%BE%E7%A4%BA%E6%91%98%E8%A6%81/" target="_blank" rel="external">Hexo主页显示摘要 | Micheal’s Blog</a></li>
-<li>方案: 在source/_post/wrt12.md正文内添加<code>&lt;!-- more --&gt;</code></li>
-<li>经验: 本以为此功能是theme独有，需要更换theme才能实现;后偶然发现，正文中添加代码即可解决。<strong>theme-&gt;正文</strong></li>
-</ul>
-<h3 id="2-更换theme"><a href="#2-更换theme" class="headerlink" title="2.更换theme"></a>2.更换theme</h3><p>~ 本节实现功能为，为博客更换theme</p>
-<ul>
-<li>参考: <a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">Themes · hexojs/hexo Wiki</a> ; <a href="https://github.com/xing5/hexo-theme-codeland" target="_blank" rel="external">xing5/hexo-theme-codeland: Color， font， and code block optimizations based on the landscape theme.</a> </li>
-<li>方案: <ul>
-<li>从hexo wiki中挑选主题 -&gt; 本人选了 <code>codeland</code></li>
-<li>检查hexo版本在2.4以上 <code>hexo version</code> -&gt; 本人的是hexo3.3.8</li>
-<li>安装 <code>$ git clone https://github.com/xing5/hexo-theme-codeland.git themes/codeland</code></li>
-<li>将_config.yml的theme设定修改为<code>theme: codeland</code></li>
-<li>取回远程库codeland更新<code>cd themes/codeland</code> <code>git pull</code></li>
-<li>查看效果 <code>#先回到hexo目录下 $ cd documents/zsy.hexo/hexo</code> <code>$ hexo g</code> <code>$ hexo s</code> <code>http://localhost:4000/Users/zsy/Documents/zsy.hexo/</code></li>
-</ul>
-</li>
-<li>经验: hexo wiki上不少theme会与本地hexo不兼容，本人本来中意的是<code>nadymain</code>，无奈css不兼容。<strong>wiki产品不兼容</strong></li>
-</ul>
-<h3 id="3-主页显示categories"><a href="#3-主页显示categories" class="headerlink" title="3.主页显示categories"></a>3.主页显示categories</h3><p>~ 本节实现功能为，主页显示categories</p>
-<ul>
-<li>参考: <a href="https://segmentfault.com/q/1010000002561642" target="_blank" rel="external">category - hexo分类与tags配置 - SegmentFault</a></li>
-<li>方案: 在正文文章添加<code>categories: [wrt]</code></li>
-<li>经验: 此功能走了相当多弯路<ul>
-<li>弯路1.参考<a href="http://code.wileam.com/update-hexo/" target="_blank" rel="external">升级hexo的一些坑 | Joanna’s coding blog</a>-&gt;以为可能是我的hexo版本为3.3.8，升级hexo后出现了某些不兼容，把锅都丢给不兼容</li>
-<li>弯路2.尝试 <code>hexo new page categories</code> 并在theme配置文件里menu下添加<code>categories: /categories</code>-&gt;以为categories是需要手动在menu里添加的，后来才发现下载的theme自带widget categories。</li>
-<li><strong>先假设对方正确，从自己正文源码找问题</strong></li>
-</ul>
-</li>
-</ul>
-<h3 id="changelog"><a href="#changelog" class="headerlink" title="changelog"></a>changelog</h3><p>18.02.01 bear 1hr</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://zhangshiying.in/2018/02/01/hexo2/" data-id="ckbq3j2lq001kqqonvw3jtanv" class="article-share-link">Share</a>
-      
-      
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2018/02/09/hexo3/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          hexo3:南辕北辙——从hexo主题丢失到手动添加submodule
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
 </section>
         
