@@ -22,17 +22,17 @@
     
         
           
-              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/b7ee7a96b591e40e5cd9ec8b10ab4cb5?s=16">
+              <link rel="shortcut icon" href="/images/Newbear.JPG">
           
         
         
           
-            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/b7ee7a96b591e40e5cd9ec8b10ab4cb5?s=192" sizes="192x192">
+            <link rel="icon" type="image/png" href="/images/Newbear.JPG" sizes="192x192">
           
         
         
           
-            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/b7ee7a96b591e40e5cd9ec8b10ab4cb5?s=180">
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/Newbear.JPG">
           
         
     
@@ -250,7 +250,7 @@
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"In die Zwischenablage kopiert!\">";
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
     btn += '<i class="far fa-clone"></i>';
     btn += '</span>'; 
     // mount it!
@@ -261,7 +261,7 @@
       }
     });
     clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "Kopiert!");
+      e.trigger.setAttribute('aria-label', "Copied!");
       e.clearSelection();
     })
   })
