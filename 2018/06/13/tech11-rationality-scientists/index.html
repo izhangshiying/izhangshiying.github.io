@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
     <!-- so meta -->
     <meta charset="utf-8">
@@ -12,6 +12,7 @@
 <meta property="og:url" content="http://zhangshiying.in/2018/06/13/tech11-rationality-scientists/index.html">
 <meta property="og:site_name" content="Easy Bear 熊咩咩">
 <meta property="og:description" content="「Rationality and the Reflective Mind」一书References中的常见科学家简介与故事。">
+<meta property="og:locale" content="zh-CN.yml">
 <meta property="og:updated_time" content="2018-06-14T07:08:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rationality科学家大集合">
@@ -265,7 +266,7 @@
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"In die Zwischenablage kopiert!\">";
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
     btn += '<i class="far fa-clone"></i>';
     btn += '</span>'; 
     // mount it!
@@ -276,7 +277,7 @@
       }
     });
     clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "Kopiert!");
+      e.trigger.setAttribute('aria-label', "Copied!");
       e.clearSelection();
     })
   })

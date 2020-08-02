@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
     <!-- so meta -->
     <meta charset="utf-8">
@@ -12,6 +12,7 @@
 <meta property="og:url" content="http://zhangshiying.in/2018/02/09/hexo3/index.html">
 <meta property="og:site_name" content="Easy Bear 熊咩咩">
 <meta property="og:description" content="「摘要」本文记录了楼主遭遇hexo部署github后,url访问主题丢失，尝试了3个截然不同方向，最后用手动配置submodule脱离困境的故事。「关键词」hexo;主题丢失;submodule;南辕北辙">
+<meta property="og:locale" content="zh-CN.yml">
 <meta property="og:updated_time" content="2018-08-07T07:28:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo3:南辕北辙——从hexo主题丢失到手动添加submodule">
@@ -272,7 +273,7 @@
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"In die Zwischenablage kopiert!\">";
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
     btn += '<i class="far fa-clone"></i>';
     btn += '</span>'; 
     // mount it!
@@ -283,7 +284,7 @@
       }
     });
     clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "Kopiert!");
+      e.trigger.setAttribute('aria-label', "Copied!");
       e.clearSelection();
     })
   })

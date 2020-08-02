@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
     <!-- so meta -->
     <meta charset="utf-8">
@@ -12,6 +12,7 @@
 <meta property="og:url" content="http://zhangshiying.in/2018/09/13/how-to-issue/index.html">
 <meta property="og:site_name" content="Easy Bear 熊咩咩">
 <meta property="og:description" content="(优先级别标定-&amp;gt; XXXL|XXL|XL|L|M|S 参考: TEE-style)  背景~ 阐述 记录/问题/事件/… 发生的背景 分析~ 先给出自己的态度以及尝试">
+<meta property="og:locale" content="zh-CN.yml">
 <meta property="og:updated_time" content="2018-09-13T05:45:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HOW-TO-ISSUE">
@@ -273,7 +274,7 @@ ooo
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"In die Zwischenablage kopiert!\">";
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
     btn += '<i class="far fa-clone"></i>';
     btn += '</span>'; 
     // mount it!
@@ -284,7 +285,7 @@ ooo
       }
     });
     clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "Kopiert!");
+      e.trigger.setAttribute('aria-label', "Copied!");
       e.clearSelection();
     })
   })

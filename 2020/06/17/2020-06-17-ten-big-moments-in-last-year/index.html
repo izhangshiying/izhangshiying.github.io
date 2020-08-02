@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
     <!-- so meta -->
     <meta charset="utf-8">
@@ -13,6 +13,7 @@
 <meta property="og:url" content="http://zhangshiying.in/2020/06/17/2020-06-17-ten-big-moments-in-last-year/index.html">
 <meta property="og:site_name" content="Easy Bear 熊咩咩">
 <meta property="og:description" content="11 件发生在 2019年1月至2020年6月 的大事.">
+<meta property="og:locale" content="zh-CN.yml">
 <meta property="og:updated_time" content="2020-06-17T08:17:47.398Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="11 件大事">
@@ -258,7 +259,7 @@
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"In die Zwischenablage kopiert!\">";
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
     btn += '<i class="far fa-clone"></i>';
     btn += '</span>'; 
     // mount it!
@@ -269,7 +270,7 @@
       }
     });
     clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "Kopiert!");
+      e.trigger.setAttribute('aria-label', "Copied!");
       e.clearSelection();
     })
   })

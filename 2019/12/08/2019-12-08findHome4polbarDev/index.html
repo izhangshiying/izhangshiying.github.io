@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
     <!-- so meta -->
     <meta charset="utf-8">
@@ -13,6 +13,7 @@
 <meta property="og:url" content="http://zhangshiying.in/2019/12/08/2019-12-08findHome4polbarDev/index.html">
 <meta property="og:site_name" content="Easy Bear 熊咩咩">
 <meta property="og:description" content="将任何问题分解为当前自己能力范畴以内的子问题序列先做 1 的时,先要做.5关键是序列…  DAMA">
+<meta property="og:locale" content="zh-CN.yml">
 <meta property="og:updated_time" content="2019-12-08T14:21:47.919Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="瑶台镜寻家">
@@ -72,7 +73,7 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2019/12/09/2019-12-09gitconfig/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" href="/2019/12/09/2019-12-18-pyenv-figure-fractal/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
         <li><a class="icon" href="/2019/12/06/191206-SS16-gitlabAPI-authentication/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
@@ -278,7 +279,7 @@
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"In die Zwischenablage kopiert!\">";
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
     btn += '<i class="far fa-clone"></i>';
     btn += '</span>'; 
     // mount it!
@@ -289,7 +290,7 @@
       }
     });
     clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "Kopiert!");
+      e.trigger.setAttribute('aria-label', "Copied!");
       e.clearSelection();
     })
   })

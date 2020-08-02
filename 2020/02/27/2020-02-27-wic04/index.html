@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
     <!-- so meta -->
     <meta charset="utf-8">
@@ -12,6 +12,7 @@
 <meta property="og:url" content="http://zhangshiying.in/2020/02/27/2020-02-27-wic04/index.html">
 <meta property="og:site_name" content="Easy Bear 熊咩咩">
 <meta property="og:description" content="第 3 章 学院他终于来到这里.深黑色的洞穴发不出一点光.地下河冲撞着岩壁,河水经由洞穴奔往海洋.洞口坍塌的巨石相互堆叠,像兄弟姐妹般亲密.他抚摸着残余的轮索,念道「就是这里,彻底而干净.」">
+<meta property="og:locale" content="zh-CN.yml">
 <meta property="og:updated_time" content="2020-02-27T03:42:51.116Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="冬日假期 第 3 章">
@@ -246,7 +247,7 @@
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"In die Zwischenablage kopiert!\">";
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
     btn += '<i class="far fa-clone"></i>';
     btn += '</span>'; 
     // mount it!
@@ -257,7 +258,7 @@
       }
     });
     clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "Kopiert!");
+      e.trigger.setAttribute('aria-label', "Copied!");
       e.clearSelection();
     })
   })

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
     <!-- so meta -->
     <meta charset="utf-8">
@@ -13,6 +13,7 @@
 <meta property="og:url" content="http://zhangshiying.in/2020/05/26/200526-diethabbit/index.html">
 <meta property="og:site_name" content="Easy Bear 熊咩咩">
 <meta property="og:description" content="液态主食: 比如粥,比如紫薯燕麦牛奶.  不自饭: 给自己,不要刻意做饭.">
+<meta property="og:locale" content="zh-CN.yml">
 <meta property="og:updated_time" content="2020-05-26T03:07:28.603Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="饮食习惯 Diet Habit">
@@ -259,7 +260,7 @@
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"In die Zwischenablage kopiert!\">";
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
     btn += '<i class="far fa-clone"></i>';
     btn += '</span>'; 
     // mount it!
@@ -270,7 +271,7 @@
       }
     });
     clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "Kopiert!");
+      e.trigger.setAttribute('aria-label', "Copied!");
       e.clearSelection();
     })
   })

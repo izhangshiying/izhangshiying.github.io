@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
     <!-- so meta -->
     <meta charset="utf-8">
@@ -12,6 +12,7 @@
 <meta property="og:url" content="http://zhangshiying.in/2018/06/21/tech12-timesheetjs/index.html">
 <meta property="og:site_name" content="Easy Bear 熊咩咩">
 <meta property="og:description" content="html文件如何引用css格式？">
+<meta property="og:locale" content="zh-CN.yml">
 <meta property="og:updated_time" content="2018-06-21T03:07:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="timesheetjs">
@@ -293,7 +294,7 @@ new Timesheet(&#39;timesheet&#39;, 2002, 2013, [
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"In die Zwischenablage kopiert!\">";
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
     btn += '<i class="far fa-clone"></i>';
     btn += '</span>'; 
     // mount it!
@@ -304,7 +305,7 @@ new Timesheet(&#39;timesheet&#39;, 2002, 2013, [
       }
     });
     clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "Kopiert!");
+      e.trigger.setAttribute('aria-label', "Copied!");
       e.clearSelection();
     })
   })
