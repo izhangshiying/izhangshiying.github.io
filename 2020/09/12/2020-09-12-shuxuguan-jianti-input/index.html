@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="背景 MacBook Air MacOS Mojave 10.14  安裝 RIME | 中州韻輸入法引擎 未進行任何配置，輸入法自動爲繁體中文。    需求 將輸入法調整爲簡體中文。  嘗試 UserGuide · rime/home Wiki UserGuide · rime/home Wiki 朙月拼音。與時下流行的拼音輸入法相近。默認安裝後將使用此方案。 其詞典包含 Rime 內置的【八股">
+<meta name="keywords" content="tech">
+<meta property="og:type" content="article">
+<meta property="og:title" content="鼠鬚管簡體法輸入配置">
+<meta property="og:url" content="http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/index.html">
+<meta property="og:site_name" content="Easy Bear 熊来了">
+<meta property="og:description" content="背景 MacBook Air MacOS Mojave 10.14  安裝 RIME | 中州韻輸入法引擎 未進行任何配置，輸入法自動爲繁體中文。    需求 將輸入法調整爲簡體中文。  嘗試 UserGuide · rime/home Wiki UserGuide · rime/home Wiki 朙月拼音。與時下流行的拼音輸入法相近。默認安裝後將使用此方案。 其詞典包含 Rime 內置的【八股">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https://user-images.githubusercontent.com/19412465/92990383-ae400580-f50e-11ea-9ff2-246c4f5a2b63.png">
+<meta property="og:updated_time" content="2020-09-12T07:44:16.672Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="鼠鬚管簡體法輸入配置">
+<meta name="twitter:description" content="背景 MacBook Air MacOS Mojave 10.14  安裝 RIME | 中州韻輸入法引擎 未進行任何配置，輸入法自動爲繁體中文。    需求 將輸入法調整爲簡體中文。  嘗試 UserGuide · rime/home Wiki UserGuide · rime/home Wiki 朙月拼音。與時下流行的拼音輸入法相近。默認安裝後將使用此方案。 其詞典包含 Rime 內置的【八股">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/19412465/92990383-ae400580-f50e-11ea-9ff2-246c4f5a2b63.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/Newbear.JPG">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/Newbear.JPG" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/Newbear.JPG">
+          
+        
+    
+    <!-- title -->
+    <title>鼠鬚管簡體法輸入配置</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首頁</a></li>
+         
+          <li><a href="/about/">關於</a></li>
+         
+          <li><a href="/archives/">文章</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2020/09/11/2020-09-11-markdown-picsize-html/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">回到頁首</span>
+      <span id="i-share" class="info" style="display:none;">分享</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&text=鼠鬚管簡體法輸入配置"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&title=鼠鬚管簡體法輸入配置"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&is_video=false&description=鼠鬚管簡體法輸入配置"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=鼠鬚管簡體法輸入配置&body=Check out this article: http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&title=鼠鬚管簡體法輸入配置"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&title=鼠鬚管簡體法輸入配置"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&title=鼠鬚管簡體法輸入配置"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&title=鼠鬚管簡體法輸入配置"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&name=鼠鬚管簡體法輸入配置&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&t=鼠鬚管簡體法輸入配置"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#背景"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#需求"><span class="toc-number">2.</span> <span class="toc-text">需求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#嘗試"><span class="toc-number">3.</span> <span class="toc-text">嘗試</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分析"><span class="toc-number">4.</span> <span class="toc-text">分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#嘗試-1"><span class="toc-number">5.</span> <span class="toc-text">嘗試</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#暫停"><span class="toc-number">6.</span> <span class="toc-text">暫停</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        鼠鬚管簡體法輸入配置
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Easy Bear 熊来了</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-09-12T07:13:24.000Z" itemprop="datePublished">2020-09-12</time>
+        
+        (Updated: <time datetime="2020-09-12T07:44:16.672Z" itemprop="dateModified">2020-09-12</time>)
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/tech/">tech</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><ul>
+<li>MacBook Air</li>
+<li>MacOS Mojave 10.14 </li>
+<li>安裝 <a href="https://rime.im/" target="_blank" rel="external">RIME | 中州韻輸入法引擎</a><ul>
+<li>未進行任何配置，輸入法自動爲繁體中文。</li>
+</ul>
+</li>
+</ul>
+<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><ul>
+<li>將輸入法調整爲簡體中文。</li>
+</ul>
+<h1 id="嘗試"><a href="#嘗試" class="headerlink" title="嘗試"></a>嘗試</h1><ul>
+<li><a href="https://github.com/rime/home/wiki/UserGuide#%E6%89%93%E5%AD%97%E5%85%A5%E9%96%80" target="_blank" rel="external">UserGuide · rime/home Wiki</a><ul>
+<li><a href="https://github.com/rime/home/wiki/UserGuide#%E6%9C%99%E6%9C%88%E6%8B%BC%E9%9F%B3" target="_blank" rel="external">UserGuide · rime/home Wiki</a><ul>
+<li><code>朙月拼音。與時下流行的拼音輸入法相近。默認安裝後將使用此方案。 其詞典包含 Rime 內置的【八股文】繁體詞庫。設有繁簡轉換的開關。</code><ul>
+<li>如何設置此拼音？</li>
+</ul>
+</li>
+<li><a href="https://github.com/rime/home/wiki/UserGuide#%E7%B9%81%E7%B0%A1%E5%AD%97%E5%88%87%E6%8F%9B" target="_blank" rel="external">繁簡字切換</a><ul>
+<li><code>大多數輸入方案都可以從「方案選單」裏選擇「漢字←→汉字」的選項來啓用或停用繁簡轉換。</code><ul>
+<li>沒找到 <strong>「方案選單」</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://placeless.net/blog/rime-squirrel-customization-2019" target="_blank" rel="external">鼠须管配置 2019</a><ul>
+<li>該文說，鼠自帶明月拼音，但是我的文件目錄如下，其實並沒有明月拼音。不知道爲啥。</li>
+<li>推斷，還是需要自己去再下載個拼音？和鼠搭配一起使用。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/19412465/92990383-ae400580-f50e-11ea-9ff2-246c4f5a2b63.png" alt="drawing" width="350"></p>
+<ul>
+<li><a href="https://miaostay.com/2018/11/rime%E8%AE%BE%E7%BD%AE%E4%B8%BA%E9%BB%98%E8%AE%A4%E7%AE%80%E4%BD%93/" target="_blank" rel="external">rime设置为默认简体 - 喵星人聚居地</a><ul>
+<li><code>然后我用的是明月拼音所以我第一反应看到的是luna_pinyin.schema.yaml ，似乎也猜对了。</code></li>
+</ul>
+</li>
+<li><a href="https://rime.im/" target="_blank" rel="external">RIME | 中州韻輸入法引擎</a><ul>
+<li><code>下載、安裝完成後，切換到 Rime 輸入法，立即擊響中文之韻。</code><ul>
+<li>嘗試了官檔所說的快捷鍵，切換簡體繁體，但毫無作用。<code>ctrl + ~</code> </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><ul>
+<li>最明顯的線索有2個<ul>
+<li><strong>「方案選單」</strong> 無法調出</li>
+<li>找不到明月拼音配置文件 luna_pinyin_tw.schema.yaml</li>
+</ul>
+</li>
+</ul>
+<h1 id="嘗試-1"><a href="#嘗試-1" class="headerlink" title="嘗試"></a>嘗試</h1><ul>
+<li>安裝明月拼音<ul>
+<li><a href="https://github.com/rime/rime-luna-pinyin" target="_blank" rel="external">rime/rime-luna-pinyin: 【朙月拼音】輸入方案</a><ul>
+<li>安裝代碼 <code>rime-install luna-pinyin</code></li>
+<li>返回 <code>-bash: rime-install: command not found</code></li>
+<li>估計從 rime 安裝就開始有問題了。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="暫停"><a href="#暫停" class="headerlink" title="暫停"></a>暫停</h1><ul>
+<li>今天的探索就到此吧。已经42分钟了。。。去做点其他的。</li>
+<li>先用Mac自带拼音。</li>
+</ul>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>請開啟 JavaScript 功能來使用留言系統</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首頁</a></li>
+         
+          <li><a href="/about/">關於</a></li>
+         
+          <li><a href="/archives/">文章</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#背景"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#需求"><span class="toc-number">2.</span> <span class="toc-text">需求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#嘗試"><span class="toc-number">3.</span> <span class="toc-text">嘗試</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分析"><span class="toc-number">4.</span> <span class="toc-text">分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#嘗試-1"><span class="toc-number">5.</span> <span class="toc-text">嘗試</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#暫停"><span class="toc-number">6.</span> <span class="toc-text">暫停</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&text=鼠鬚管簡體法輸入配置"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&title=鼠鬚管簡體法輸入配置"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&is_video=false&description=鼠鬚管簡體法輸入配置"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=鼠鬚管簡體法輸入配置&body=Check out this article: http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&title=鼠鬚管簡體法輸入配置"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&title=鼠鬚管簡體法輸入配置"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&title=鼠鬚管簡體法輸入配置"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&title=鼠鬚管簡體法輸入配置"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&name=鼠鬚管簡體法輸入配置&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://zhangshiying.in/2020/09/12/2020-09-12-shuxuguan-jianti-input/&t=鼠鬚管簡體法輸入配置"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 選單</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 文章目錄</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 頁首</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2018-2020
+    熊本张
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首頁</a></li>
+         
+          <li><a href="/about/">關於</a></li>
+         
+          <li><a href="/archives/">文章</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'bear';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+</body>
+</html>
