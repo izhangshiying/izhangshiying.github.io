@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="需求 爬取保险10篇的源头保险数据  方案  pdf 获取  手动 pdf 搜索  手动记录数据  数据登入 wps 表格  进度  0B01  0B02  0B03  0B04  0B05  0B06  0B07  0B08  0B09  0B10">
+    <meta name="description" content="需求 爬取保险10篇的源头保险数据  方案  pdf 获取  手动 pdf 搜索  理解并确认数据  手动记录数据  数据登入 wps 表格  进度  0B01  0B02  0B03  0B04  0B05  0B06  0B07  0B08  0B09  0B10">
 <meta name="keywords" content="tech">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pdf 爬取保险数据">
 <meta property="og:url" content="http://zhangshiying.in/2021/05/31/2021-05-31-pdf-get-data/index.html">
 <meta property="og:site_name" content="熊本张 BenBear42">
-<meta property="og:description" content="需求 爬取保险10篇的源头保险数据  方案  pdf 获取  手动 pdf 搜索  手动记录数据  数据登入 wps 表格  进度  0B01  0B02  0B03  0B04  0B05  0B06  0B07  0B08  0B09  0B10">
+<meta property="og:description" content="需求 爬取保险10篇的源头保险数据  方案  pdf 获取  手动 pdf 搜索  理解并确认数据  手动记录数据  数据登入 wps 表格  进度  0B01  0B02  0B03  0B04  0B05  0B06  0B07  0B08  0B09  0B10">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2021-05-31T06:24:04.597Z">
+<meta property="og:updated_time" content="2021-06-02T10:40:43.941Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pdf 爬取保险数据">
-<meta name="twitter:description" content="需求 爬取保险10篇的源头保险数据  方案  pdf 获取  手动 pdf 搜索  手动记录数据  数据登入 wps 表格  进度  0B01  0B02  0B03  0B04  0B05  0B06  0B07  0B08  0B09  0B10">
+<meta name="twitter:description" content="需求 爬取保险10篇的源头保险数据  方案  pdf 获取  手动 pdf 搜索  理解并确认数据  手动记录数据  数据登入 wps 表格  进度  0B01  0B02  0B03  0B04  0B05  0B06  0B07  0B08  0B09  0B10">
     
     
         
@@ -128,7 +128,7 @@
       
         <time datetime="2021-05-31T05:56:48.000Z" itemprop="datePublished">2021-05-31</time>
         
-        (Updated: <time datetime="2021-05-31T06:24:04.597Z" itemprop="dateModified">2021-05-31</time>)
+        (Updated: <time datetime="2021-06-02T10:40:43.941Z" itemprop="dateModified">2021-06-02</time>)
         
       
     </div>
@@ -154,18 +154,19 @@
 <h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><ul>
 <li style="list-style: none"><input type="checkbox" checked> pdf 获取</li>
 <li style="list-style: none"><input type="checkbox" checked> 手动 pdf 搜索</li>
+<li style="list-style: none"><input type="checkbox" checked> <strong>理解并确认数据</strong></li>
 <li style="list-style: none"><input type="checkbox" checked> 手动记录数据</li>
 <li style="list-style: none"><input type="checkbox" checked> 数据登入 wps 表格</li>
 </ul>
 <h2 id="进度"><a href="#进度" class="headerlink" title="进度"></a>进度</h2><ul>
 <li style="list-style: none"><input type="checkbox" checked> 0B01</li>
 <li style="list-style: none"><input type="checkbox" checked> 0B02</li>
-<li style="list-style: none"><input type="checkbox"> 0B03</li>
-<li style="list-style: none"><input type="checkbox"> 0B04</li>
-<li style="list-style: none"><input type="checkbox"> 0B05</li>
-<li style="list-style: none"><input type="checkbox"> 0B06</li>
-<li style="list-style: none"><input type="checkbox"> 0B07</li>
-<li style="list-style: none"><input type="checkbox"> 0B08</li>
+<li style="list-style: none"><input type="checkbox" checked> 0B03</li>
+<li style="list-style: none"><input type="checkbox" checked> 0B04</li>
+<li style="list-style: none"><input type="checkbox" checked> 0B05</li>
+<li style="list-style: none"><input type="checkbox" checked> 0B06</li>
+<li style="list-style: none"><input type="checkbox" checked> 0B07</li>
+<li style="list-style: none"><input type="checkbox" checked> 0B08</li>
 <li style="list-style: none"><input type="checkbox"> 0B09</li>
 <li style="list-style: none"><input type="checkbox"> 0B10</li>
 </ul>
@@ -265,7 +266,7 @@
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"In die Zwischenablage kopiert!\">";
     btn += '<i class="far fa-clone"></i>';
     btn += '</span>'; 
     // mount it!
@@ -276,7 +277,7 @@
       }
     });
     clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "Copied!");
+      e.trigger.setAttribute('aria-label', "Kopiert!");
       e.clearSelection();
     })
   })
